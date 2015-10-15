@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cordova App Test</title>
+</head>
+<body>
+
+<input type="button" name="test" value="Click Me" onclick="playSound()" />
+
+<script src="https://code.createjs.com/soundjs-0.6.1.min.js"></script>
+<script>
+    createjs.Sound.registerSound({id:"music", src:"audio/Level16.mp3"});
+    createjs.Sound.setDefaultPlayProps("music", {pan:0.001});
+    function playSound() {
+        createjs.Sound.play("music");
+    }
+</script>
+
+</body>
+</html>
